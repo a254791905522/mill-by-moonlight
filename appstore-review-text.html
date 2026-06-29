@@ -9,12 +9,12 @@
   h1 { font-size: 26px; margin-bottom: 8px; }
   .subtitle { color: #555; margin-bottom: 24px; }
   .field { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
-  .field-label { font-weight: 600; font-size: 13px; text-transform: uppercase; color: #555; margin-bottom: 6px; display: flex; justify-content: space-between; }
-  .field-value { font-size: 15px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word; }
-  .char-count { font-weight: 400; color: #888; font-size: 12px; }
+  .field > label { display: block; font-weight: 600; font-size: 13px; text-transform: uppercase; color: #555; margin-bottom: 6px; }
+  .field > pre.value { margin: 0; padding: 8px 10px; background: #f6f8fa; border-radius: 6px; font-size: 15px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word; font-family: inherit; color: #1a1a1a; }
+  .char-count { display: inline-block; margin-left: 8px; font-weight: 400; color: #888; font-size: 12px; text-transform: none; }
   .char-count.ok { color: #2ea44f; }
   .char-count.warn { color: #d1242f; }
-  button.copy { font-size: 12px; padding: 4px 10px; border: 1px solid #d1d5da; border-radius: 6px; background: #f6f8fa; cursor: pointer; }
+  button.copy { margin-top: 8px; font-size: 12px; padding: 4px 10px; border: 1px solid #d1d5da; border-radius: 6px; background: #f6f8fa; cursor: pointer; }
   button.copy:hover { background: #eef1f5; }
   .section-title { font-size: 18px; font-weight: 700; margin-top: 28px; margin-bottom: 12px; }
   .fact-card { background: #f0f7ff; border-left: 4px solid #0969da; padding: 12px 16px; border-radius: 0 8px 8px 0; }
@@ -27,90 +27,90 @@
 <div class="section-title">App Information</div>
 
 <div class="field">
-  <div class="field-label">App Name</div>
-  <div class="field-value" id="app-name">Mill By Moonlight</div>
+  <label>App Name</label>
+  <pre class="value" id="app-name">Mill By Moonlight</pre>
   <button class="copy" onclick="copyToClipboard('app-name')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Subtitle <span class="char-count ok">25 / 30</span></div>
-  <div class="field-value" id="subtitle">A Lunar Tide Milling Tale</div>
+  <label>Subtitle<span class="char-count ok">25 / 30</span></label>
+  <pre class="value" id="subtitle">A Lunar Tide Milling Tale</pre>
   <button class="copy" onclick="copyToClipboard('subtitle')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Bundle ID</div>
-  <div class="field-value" id="bundle-id">com.rosewood.tidemill.game</div>
+  <label>Bundle ID</label>
+  <pre class="value" id="bundle-id">com.rosewood.tidemill.game</pre>
   <button class="copy" onclick="copyToClipboard('bundle-id')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">SKU</div>
-  <div class="field-value" id="sku">tidemill-ios-001</div>
+  <label>SKU</label>
+  <pre class="value" id="sku">tidemill-ios-001</pre>
   <button class="copy" onclick="copyToClipboard('sku')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Category</div>
-  <div class="field-value" id="category">Games / Simulation</div>
+  <label>Category</label>
+  <pre class="value" id="category">Games / Simulation</pre>
   <button class="copy" onclick="copyToClipboard('category')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Age Rating</div>
-  <div class="field-value" id="age-rating">4+</div>
+  <label>Age Rating</label>
+  <pre class="value" id="age-rating">4+</pre>
   <button class="copy" onclick="copyToClipboard('age-rating')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Version</div>
-  <div class="field-value" id="version">1.0</div>
+  <label>Version</label>
+  <pre class="value" id="version">1.0</pre>
   <button class="copy" onclick="copyToClipboard('version')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Copyright</div>
-  <div class="field-value" id="copyright">2026 Rosewood Studio</div>
+  <label>Copyright</label>
+  <pre class="value" id="copyright">2026 Rosewood Studio</pre>
   <button class="copy" onclick="copyToClipboard('copyright')">Copy</button>
 </div>
 
 <div class="section-title">URLs</div>
 
 <div class="field">
-  <div class="field-label">Support URL</div>
-  <div class="field-value" id="support-url">https://mill-by-moonlight.vercel.app</div>
+  <label>Support URL</label>
+  <pre class="value" id="support-url">https://mill-by-moonlight.vercel.app</pre>
   <button class="copy" onclick="copyToClipboard('support-url')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Marketing URL</div>
-  <div class="field-value" id="marketing-url">https://mill-by-moonlight.vercel.app</div>
+  <label>Marketing URL</label>
+  <pre class="value" id="marketing-url">https://mill-by-moonlight.vercel.app</pre>
   <button class="copy" onclick="copyToClipboard('marketing-url')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Privacy Policy URL</div>
-  <div class="field-value" id="privacy-url">https://mill-by-moonlight.vercel.app/privacy.html</div>
+  <label>Privacy Policy URL</label>
+  <pre class="value" id="privacy-url">https://mill-by-moonlight.vercel.app/privacy.html</pre>
   <button class="copy" onclick="copyToClipboard('privacy-url')">Copy</button>
 </div>
 
 <div class="section-title">App Store Localizable Text</div>
 
 <div class="field">
-  <div class="field-label">Promotional Text <span class="char-count ok">120 / 170</span></div>
-  <div class="field-value" id="promo-text">Harness moon-driven tides to grind flour at the historic Eling tide mill. 50 contracts across four millstone eras await.</div>
+  <label>Promotional Text<span class="char-count ok">120 / 170</span></label>
+  <pre class="value" id="promo-text">Harness moon-driven tides to grind flour at the historic Eling tide mill. 50 contracts across four millstone eras await.</pre>
   <button class="copy" onclick="copyToClipboard('promo-text')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Keywords <span class="char-count ok">73 / 100</span></div>
-  <div class="field-value" id="keywords">tide,mill,moon,milling,flour,simulation,lunar,waterwheel,strategy,offline</div>
+  <label>Keywords<span class="char-count ok">73 / 100</span></label>
+  <pre class="value" id="keywords">tide,mill,moon,milling,flour,simulation,lunar,waterwheel,strategy,offline</pre>
   <button class="copy" onclick="copyToClipboard('keywords')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Description</div>
-  <div class="field-value" id="description">Mill By Moonlight is an offline lunar tide milling simulation built with SpriteKit. You operate a historic tide mill at Eling, Hampshire, where the moon drives the tides and the tides drive the water wheel that turns the millstone.
+  <label>Description</label>
+  <pre class="value" id="description">Mill By Moonlight is an offline lunar tide milling simulation built with SpriteKit. You operate a historic tide mill at Eling, Hampshire, where the moon drives the tides and the tides drive the water wheel that turns the millstone.
 
 HOW TO PLAY
 - Read the moon phase. Full moon and new moon bring spring tides with the most energy.
@@ -136,45 +136,45 @@ FEATURES
 - Fully offline. No ads, no in-app purchases, no accounts, no tracking.
 - Portrait orientation, iPhone only.
 
-Mill By Moonlight is a calm, atmospheric simulation about reading the moon and mastering the rhythm of the tide mill.</div>
+Mill By Moonlight is a calm, atmospheric simulation about reading the moon and mastering the rhythm of the tide mill.</pre>
   <button class="copy" onclick="copyToClipboard('description')">Copy</button>
 </div>
 
 <div class="section-title">Review Information</div>
 
 <div class="field">
-  <div class="field-label">Sign-in Required</div>
-  <div class="field-value" id="signin">No</div>
+  <label>Sign-in Required</label>
+  <pre class="value" id="signin">No</pre>
   <button class="copy" onclick="copyToClipboard('signin')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Review Contact - Last Name</div>
-  <div class="field-value" id="contact-last">Omondi</div>
+  <label>Review Contact - Last Name</label>
+  <pre class="value" id="contact-last">Omondi</pre>
   <button class="copy" onclick="copyToClipboard('contact-last')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Review Contact - First Name</div>
-  <div class="field-value" id="contact-first">Evans</div>
+  <label>Review Contact - First Name</label>
+  <pre class="value" id="contact-first">Evans</pre>
   <button class="copy" onclick="copyToClipboard('contact-first')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Phone Number</div>
-  <div class="field-value" id="phone">+1 2096550297</div>
+  <label>Phone Number</label>
+  <pre class="value" id="phone">+1 2096550297</pre>
   <button class="copy" onclick="copyToClipboard('phone')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Email</div>
-  <div class="field-value" id="email">croitorzamkov@gmail.com</div>
+  <label>Email</label>
+  <pre class="value" id="email">croitorzamkov@gmail.com</pre>
   <button class="copy" onclick="copyToClipboard('email')">Copy</button>
 </div>
 
 <div class="field">
-  <div class="field-label">Review Notes</div>
-  <div class="field-value" id="review-notes">1. Launch the app.
+  <label>Review Notes</label>
+  <pre class="value" id="review-notes">1. Launch the app.
 2. The main menu shows "Mill By Moonlight" title with "Play", "Levels", and "Settings" buttons on a moonlit tide mill background.
 3. Tap "Play" to start the current level. The first unstarred unlocked level is auto-selected.
 4. The game scene shows the tide mill with moon phase indicator, water wheel, millstone, wheat and flour storage, and gold balance.
@@ -187,7 +187,7 @@ Mill By Moonlight is a calm, atmospheric simulation about reading the moon and m
 11. Return to menu and tap "Levels" to see the level select grid. Verify locked levels show a lock icon and cannot be opened until the previous level is completed.
 12. Tap the Settings button to verify Music and Sound Effects toggles.
 13. Verify the app is fully offline: no network calls, no accounts, no ads, no in-app purchases. All progress is saved locally on device.
-14. The app supports portrait orientation only and iPhone only. ITSAppUsesNonExemptEncryption = false.</div>
+14. The app supports portrait orientation only and iPhone only. ITSAppUsesNonExemptEncryption = false.</pre>
   <button class="copy" onclick="copyToClipboard('review-notes')">Copy</button>
 </div>
 
@@ -204,7 +204,7 @@ Mill By Moonlight is a calm, atmospheric simulation about reading the moon and m
 function copyToClipboard(elementId) {
   const text = document.getElementById(elementId).innerText;
   navigator.clipboard.writeText(text).then(function() {
-    const btn = document.querySelector('button[onclick="copyToClipboard(\'' + elementId + '\')']");
+    const btn = document.querySelector('button[onclick="copyToClipboard(\'' + elementId + '\')"]');
     const original = btn.innerText;
     btn.innerText = 'Copied';
     setTimeout(function() { btn.innerText = original; }, 1200);
