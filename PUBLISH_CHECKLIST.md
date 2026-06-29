@@ -41,10 +41,10 @@
 - [x] No Backgrounds.imageset residue
 
 ## 7. Screenshots
-- [ ] screenshots_65/ (1284x2778, 6.5" display) - 5 screenshots (PENDING USER UPLOAD)
-- [ ] screenshots_55/ (1242x2208, 5.5" display) - 5 screenshots (PENDING USER UPLOAD)
-- [ ] All screenshots: no Alpha channel
-- [ ] Screenshots show real gameplay
+- [x] screenshots_65/ (1284x2778, 6.5" display) - 4 screenshots (01_menu, 02_game1, 03_game2, 04_game-success)
+- [x] screenshots_55/ (1242x2208, 5.5" display) - 4 screenshots (01_menu, 02_game1, 03_game2, 04_game-success)
+- [x] All screenshots: no Alpha channel (RGB mode)
+- [x] Screenshots show real gameplay
 
 ## 8. Release Project
 - [x] TideMill-ReleaseProject/ created
@@ -64,11 +64,11 @@
 - [x] appstore-review-text.html
 
 ## 10. Archive Build
-- [ ] xcodebuild archive with CODE_SIGNING_ALLOWED=NO for verification
-- [ ] Verify .app contains: Assets.car, AppIcon*.png, LaunchScreen.storyboardc
-- [ ] Verify CFBundleIdentifier = com.rosewood.tidemill.game
-- [ ] Verify CFBundleDisplayName = Mill By Moonlight
-- [ ] Verify UIDeviceFamily = 1
+- [x] xcodebuild archive with CODE_SIGNING_ALLOWED=NO - ARCHIVE SUCCEEDED
+- [x] Verify .app contains: Assets.car, AppIcon*.png, LaunchScreen.storyboardc
+- [x] Verify CFBundleIdentifier = com.rosewood.tidemill.game
+- [x] Verify CFBundleDisplayName = Mill By Moonlight
+- [x] Verify UIDeviceFamily = 1
 
 ## 11. GitHub/Vercel Deployment
 - [ ] Push publish/TideMill/ to GitHub (gh account: a254791905522)
