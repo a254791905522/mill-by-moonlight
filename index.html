@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mill By Moonlight</title>
+  <meta name="description" content="A lunar tide milling simulation. Harness moon-driven tides to grind flour across 50 levels at the historic Eling tide mill.">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg2: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #d4af37;
+      --accent2: #5eb3f0;
+      --line: rgba(255,255,255,.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
+    main { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .hero { text-align: center; padding: 80px 0 48px; }
+    .badge { display: inline-block; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--accent); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-size: 42px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 12px; color: #f0f6fc; }
+    .subtitle { font-size: 20px; color: var(--accent); margin-bottom: 18px; }
+    .intro { max-width: 680px; margin: 0 auto; color: var(--muted); font-size: 16px; }
+    section { padding: 48px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 28px; margin-bottom: 24px; color: #f0f6fc; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .shot-card { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .shot-card img { width: 100%; display: block; }
+    .shot-card h3 { padding: 14px 16px 4px; font-size: 16px; color: #f0f6fc; }
+    .shot-card p { padding: 0 16px 16px; font-size: 14px; color: var(--muted); }
+    .card { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+    .card p { margin-bottom: 12px; }
+    .card p:last-child { margin-bottom: 0; }
+    .features { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .feature { background: var(--bg2); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+    .feature .step { display: inline-block; width: 28px; height: 28px; line-height: 28px; text-align: center; border-radius: 50%; background: var(--accent); color: #1a1a1a; font-weight: 700; font-size: 14px; margin-bottom: 10px; }
+    .feature h3 { font-size: 15px; margin-bottom: 6px; color: #f0f6fc; }
+    .feature p { font-size: 13px; color: var(--muted); }
+    .info { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+    .info > div { background: var(--bg2); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+    .info .label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: 4px; }
+    .info .value { font-size: 15px; color: #f0f6fc; }
+    footer { border-top: 1px solid var(--line); padding: 32px 0; text-align: center; color: var(--muted); font-size: 14px; }
+    footer a { color: var(--accent2); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { h1 { font-size: 30px; } .hero { padding: 50px 0 32px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="badge">Games / Simulation</div>
+      <h1>Mill By Moonlight</h1>
+      <p class="subtitle">A Lunar Tide Milling Tale</p>
+      <p class="intro">A lunar tide milling simulation. Harness moon-driven tides to grind flour at the historic Eling tide mill across 50 contracts.</p>
+    </header>
+
+    <section class="screens">
+      <h2>Screenshots</h2>
+      <div class="grid">
+        <div class="shot-card">
+          <img src="screenshots_65/menu.png" alt="Mill By Moonlight main menu">
+          <h3>Main Menu</h3>
+          <p>Start milling, choose a contract, or adjust audio.</p>
+        </div>
+        <div class="shot-card">
+          <img src="screenshots_65/game1.png" alt="Grinding flour at full moon">
+          <h3>Full Moon Milling</h3>
+          <p>Tap the millstone to engage the grind when the moon is ready.</p>
+        </div>
+        <div class="shot-card">
+          <img src="screenshots_65/game2.png" alt="Tide and moon phase">
+          <h3>Tide &amp; Moon</h3>
+          <p>Watch the moon phase drive the tide amplitude.</p>
+        </div>
+        <div class="shot-card">
+          <img src="screenshots_65/game3.png" alt="Selling flour">
+          <h3>Sell &amp; Upgrade</h3>
+          <p>Sell flour for gold and upgrade wheel, stone, and storage.</p>
+        </div>
+        <div class="shot-card">
+          <img src="screenshots_65/game-success.png" alt="Level complete">
+          <h3>Level Complete</h3>
+          <p>Earn up to three stars based on flour, gold, and upgrades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>About Mill By Moonlight</h2>
+      <div class="card">
+        <p>Mill By Moonlight is an offline lunar tide milling simulation built with SpriteKit. You operate a historic tide mill at Eling, Hampshire, where the moon drives the tides and the tides drive the water wheel that turns the millstone.</p>
+        <p>Grind wheat into flour, sell it for gold, and upgrade your equipment across 50 contracts. Each contract challenges you to reach a flour or gold target within a limited number of game days, while the moon phase cycles and the tide rises and falls.</p>
+        <p>Read the moon, wait for the spring tide, engage the millstone at the right moment, and master the rhythm of the tide mill.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>How to Play</h2>
+      <div class="features">
+        <div class="feature">
+          <span class="step">1</span>
+          <h3>Read the Moon</h3>
+          <p>The moon phase drives the tide. Full moon and new moon bring spring tides with the most energy.</p>
+        </div>
+        <div class="feature">
+          <span class="step">2</span>
+          <h3>Engage the Millstone</h3>
+          <p>Tap the millstone to start grinding. The moon must be at least one-third full or the mill auto-disengages.</p>
+        </div>
+        <div class="feature">
+          <span class="step">3</span>
+          <h3>Manage Wheat &amp; Flour</h3>
+          <p>Watch your wheat supply and flour storage. Sell flour to free up capacity and earn gold.</p>
+        </div>
+        <div class="feature">
+          <span class="step">4</span>
+          <h3>Upgrade Equipment</h3>
+          <p>Spend gold to upgrade the water wheel, millstone, and storage for faster, more efficient milling.</p>
+        </div>
+        <div class="feature">
+          <span class="step">5</span>
+          <h3>Reach the Goal</h3>
+          <p>Hit the flour or gold target before the day limit to complete the contract and earn stars.</p>
+        </div>
+        <div class="feature">
+          <span class="step">6</span>
+          <h3>Progress Through Eras</h3>
+          <p>50 contracts span Stone, Porcelain, Steel, and Ceramic millstone eras with rising difficulty.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>How do I play?</h3>
+          <p>Read the moon phase, wait for at least one-third full moon, tap the millstone to grind, and sell flour.</p>
+        </div>
+        <div class="feature">
+          <h3>Does it need internet?</h3>
+          <p>No. Mill By Moonlight is fully offline. No accounts, no ads, no tracking.</p>
+        </div>
+        <div class="feature">
+          <h3>Need help?</h3>
+          <p>Visit the App Store product page for support contact after release.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>App Information</h2>
+      <div class="info">
+        <div><span class="label">Genre</span><div class="value">Games / Simulation</div></div>
+        <div><span class="label">Compatibility</span><div class="value">iOS 15.0 or later</div></div>
+        <div><span class="label">Device Support</span><div class="value">iPhone only</div></div>
+        <div><span class="label">Age Rating</span><div class="value">4+</div></div>
+        <div><span class="label">Version</span><div class="value">1.0</div></div>
+        <div><span class="label">Language</span><div class="value">English</div></div>
+        <div><span class="label">Privacy</span><div class="value">No data collected</div></div>
+        <div><span class="label">Bundle ID</span><div class="value">com.rosewood.tidemill.game</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Mill By Moonlight. All rights reserved.</div>
+    <div><a href="/privacy.html">Privacy Policy</a></div>
+  </footer>
+</body>
+</html>
