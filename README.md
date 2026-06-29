@@ -2,7 +2,7 @@
 
 App name: Mill By Moonlight
 
-Bundle ID: com.rosewood.tidemill.game
+Bundle ID: com.rosewood.millbymoonlight.game
 
 Device support: iPhone only
 

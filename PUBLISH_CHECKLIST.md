@@ -1,7 +1,7 @@
 # Mill By Moonlight - Publish Checklist
 
 ## 1. Project Configuration
-- [x] Bundle ID contains 'rosewood': com.rosewood.tidemill.game
+- [x] Bundle ID contains 'rosewood': com.rosewood.millbymoonlight.game
 - [x] TARGETED_DEVICE_FAMILY: "1" (iPhone only)
 - [x] No iPad support (UIDeviceFamily = 1 only)
 - [x] project.yml has no hardcoded signing restrictions
@@ -66,20 +66,20 @@
 ## 10. Archive Build
 - [x] xcodebuild archive with CODE_SIGNING_ALLOWED=NO - ARCHIVE SUCCEEDED
 - [x] Verify .app contains: Assets.car, AppIcon*.png, LaunchScreen.storyboardc
-- [x] Verify CFBundleIdentifier = com.rosewood.tidemill.game
+- [x] Verify CFBundleIdentifier = com.rosewood.millbymoonlight.game
 - [x] Verify CFBundleDisplayName = Mill By Moonlight
 - [x] Verify UIDeviceFamily = 1
 
 ## 11. GitHub/Vercel Deployment
-- [ ] Push publish/TideMill/ to GitHub (gh account: a254791905522)
-- [ ] Use proxy 127.0.0.1:7897
-- [ ] Vercel auto-deploy
-- [ ] curl verify index.html live
-- [ ] curl verify /privacy.html live (not /privacy)
+- [x] Push publish/TideMill/ to GitHub (gh account: a254791905522, repo: mill-by-moonlight)
+- [x] Use proxy 127.0.0.1:7897
+- [x] Vercel deployed: https://mill-by-moonlight.vercel.app
+- [x] curl verify index.html live (HTTP/2 200)
+- [x] curl verify /privacy.html live (HTTP/2 200, no 308 redirect)
 
 ## 12. App Store Connect
 - [ ] App name: Mill By Moonlight
-- [ ] Bundle ID: com.rosewood.tidemill.game
+- [ ] Bundle ID: com.rosewood.millbymoonlight.game
 - [ ] Support URL: https://mill-by-moonlight.vercel.app/
 - [ ] Privacy Policy URL: https://mill-by-moonlight.vercel.app/privacy.html
 - [ ] Screenshots uploaded (1284x2778 and 1242x2208)

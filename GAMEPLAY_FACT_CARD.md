@@ -2,7 +2,7 @@
 
 ## App Identity
 - **App Name**: Mill By Moonlight
-- **Bundle ID**: com.rosewood.tidemill.game
+- **Bundle ID**: com.rosewood.millbymoonlight.game
 - **Version**: 1.0
 - **Platform**: iOS (iPhone only)
 - **Minimum iOS**: 15.0
