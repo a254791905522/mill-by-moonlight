@@ -1,43 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mill By Moonlight - App Store Review Text</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; max-width: 900px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a; }
-    h1 { font-size: 28px; margin-bottom: 8px; }
-    .lede { color: #555; margin-top: 0; }
-    .field { background: #f5fbf7; border-left: 4px solid #31cf72; padding: 14px 18px; margin: 14px 0; border-radius: 4px; }
-    .field > label { display: block; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: .08em; color: #2a8a52; }
-    .field > .value { display: block; margin: 6px 0 0 0; white-space: pre-wrap; font-family: inherit; font-size: inherit; color: inherit; }
-    .field.promo { background: #fff8e6; border-left-color: #e0a800; }
-    .field.promo > label { color: #8a6a00; }
-    h2 { margin-top: 36px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mill By Moonlight - App Store Review Text</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 32px auto; padding: 0 20px; color: #1a1a1a; background: #f8f9fa; }
+  h1 { font-size: 26px; margin-bottom: 8px; }
+  .subtitle { color: #555; margin-bottom: 24px; }
+  .field { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+  .field-label { font-weight: 600; font-size: 13px; text-transform: uppercase; color: #555; margin-bottom: 6px; display: flex; justify-content: space-between; }
+  .field-value { font-size: 15px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word; }
+  .char-count { font-weight: 400; color: #888; font-size: 12px; }
+  .char-count.ok { color: #2ea44f; }
+  .char-count.warn { color: #d1242f; }
+  button.copy { font-size: 12px; padding: 4px 10px; border: 1px solid #d1d5da; border-radius: 6px; background: #f6f8fa; cursor: pointer; }
+  button.copy:hover { background: #eef1f5; }
+  .section-title { font-size: 18px; font-weight: 700; margin-top: 28px; margin-bottom: 12px; }
+  .fact-card { background: #f0f7ff; border-left: 4px solid #0969da; padding: 12px 16px; border-radius: 0 8px 8px 0; }
+</style>
 </head>
 <body>
-  <h1>Mill By Moonlight - App Store Metadata</h1>
-  <p class="lede">Complete App Store Connect metadata for copy-paste during submission.</p>
+<h1>Mill By Moonlight - App Store Review Text</h1>
+<p class="subtitle">Copy each field into App Store Connect. Character counts are shown for fields with limits.</p>
 
-  <div class="field">
-    <label>App Name</label>
-    <pre class="value">Mill By Moonlight</pre>
-  </div>
+<div class="section-title">App Information</div>
 
-  <div class="field">
-    <label>Subtitle</label>
-    <pre class="value">A Lunar Tide Milling Tale</pre>
-  </div>
+<div class="field">
+  <div class="field-label">App Name</div>
+  <div class="field-value" id="app-name">Mill By Moonlight</div>
+  <button class="copy" onclick="copyToClipboard('app-name')">Copy</button>
+</div>
 
-  <div class="field">
-    <label>Promotional Text</label>
-    <pre class="value">Harness moon-driven tides to grind flour at the historic Eling tide mill. 50 contracts across four millstone eras await.</pre>
-  </div>
+<div class="field">
+  <div class="field-label">Subtitle <span class="char-count ok">25 / 30</span></div>
+  <div class="field-value" id="subtitle">A Lunar Tide Milling Tale</div>
+  <button class="copy" onclick="copyToClipboard('subtitle')">Copy</button>
+</div>
 
-  <div class="field">
-    <label>Description</label>
-    <pre class="value">Mill By Moonlight is an offline lunar tide milling simulation built with SpriteKit. You operate a historic tide mill at Eling, Hampshire, where the moon drives the tides and the tides drive the water wheel that turns the millstone.
+<div class="field">
+  <div class="field-label">Bundle ID</div>
+  <div class="field-value" id="bundle-id">com.rosewood.tidemill.game</div>
+  <button class="copy" onclick="copyToClipboard('bundle-id')">Copy</button>
+</div>
+
+<div class="field">
+  <div class="field-label">SKU</div>
+  <div class="field-value" id="sku">tidemill-ios-001</div>
+  <button class="copy" onclick="copyToClipboard('sku')">Copy</button>
+</div>
+
+<div class="field">
+  <div class="field-label">Category</div>
+  <div class="field-value" id="category">Games / Simulation</div>
+  <button class="copy" onclick="copyToClipboard('category')">Copy</button>
+</div>
+
+<div class="field">
+  <div class="field-label">Age Rating</div>
+  <div class="field-value" id="age-rating">4+</div>
+  <button class="copy" onclick="copyToClipboard('age-rating')">Copy</button>
+</div>
+
+<div class="field">
+  <div class="field-label">Version</div>
+  <div class="field-value" id="version">1.0</div>
+  <button class="copy" onclick="copyToClipboard('version')">Copy</button>
+</div>
+
+<div class="field">
+  <div class="field-label">Copyright</div>
+  <div class="field-value" id="copyright">2026 Rosewood Studio</div>
+  <button class="copy" onclick="copyToClipboard('copyright')">Copy</button>
+</div>
+
+<div class="section-title">URLs</div>
+
+<div class="field">
+  <div class="field-label">Support URL</div>
+  <div class="field-value" id="support-url">https://mill-by-moonlight.vercel.app</div>
+  <button class="copy" onclick="copyToClipboard('support-url')">Copy</button>
+</div>
+
+<div class="field">
+  <div class="field-label">Marketing URL</div>
+  <div class="field-value" id="marketing-url">https://mill-by-moonlight.vercel.app</div>
+  <button class="copy" onclick="copyToClipboard('marketing-url')">Copy</button>
+</div>
+
+<div class="field">
+  <div class="field-label">Privacy Policy URL</div>
+  <div class="field-value" id="privacy-url">https://mill-by-moonlight.vercel.app/privacy.html</div>
+  <button class="copy" onclick="copyToClipboard('privacy-url')">Copy</button>
+</div>
+
+<div class="section-title">App Store Localizable Text</div>
+
+<div class="field">
+  <div class="field-label">Promotional Text <span class="char-count ok">120 / 170</span></div>
+  <div class="field-value" id="promo-text">Harness moon-driven tides to grind flour at the historic Eling tide mill. 50 contracts across four millstone eras await.</div>
+  <button class="copy" onclick="copyToClipboard('promo-text')">Copy</button>
+</div>
+
+<div class="field">
+  <div class="field-label">Keywords <span class="char-count ok">73 / 100</span></div>
+  <div class="field-value" id="keywords">tide,mill,moon,milling,flour,simulation,lunar,waterwheel,strategy,offline</div>
+  <button class="copy" onclick="copyToClipboard('keywords')">Copy</button>
+</div>
+
+<div class="field">
+  <div class="field-label">Description</div>
+  <div class="field-value" id="description">Mill By Moonlight is an offline lunar tide milling simulation built with SpriteKit. You operate a historic tide mill at Eling, Hampshire, where the moon drives the tides and the tides drive the water wheel that turns the millstone.
 
 HOW TO PLAY
 - Read the moon phase. Full moon and new moon bring spring tides with the most energy.
@@ -63,62 +136,80 @@ FEATURES
 - Fully offline. No ads, no in-app purchases, no accounts, no tracking.
 - Portrait orientation, iPhone only.
 
-Mill By Moonlight is a calm, atmospheric simulation about reading the moon and mastering the rhythm of the tide mill.</pre>
-  </div>
+Mill By Moonlight is a calm, atmospheric simulation about reading the moon and mastering the rhythm of the tide mill.</div>
+  <button class="copy" onclick="copyToClipboard('description')">Copy</button>
+</div>
 
-  <div class="field">
-    <label>Keywords</label>
-    <pre class="value">tide,mill,moon,milling,flour,simulation,lunar,waterwheel,strategy,offline</pre>
-  </div>
+<div class="section-title">Review Information</div>
 
-  <div class="field">
-    <label>Support URL</label>
-    <pre class="value">https://mill-by-moonlight.vercel.app/</pre>
-  </div>
+<div class="field">
+  <div class="field-label">Sign-in Required</div>
+  <div class="field-value" id="signin">No</div>
+  <button class="copy" onclick="copyToClipboard('signin')">Copy</button>
+</div>
 
-  <div class="field">
-    <label>Privacy Policy URL</label>
-    <pre class="value">https://mill-by-moonlight.vercel.app/privacy.html</pre>
-  </div>
+<div class="field">
+  <div class="field-label">Review Contact - Last Name</div>
+  <div class="field-value" id="contact-last">Omondi</div>
+  <button class="copy" onclick="copyToClipboard('contact-last')">Copy</button>
+</div>
 
-  <div class="field">
-    <label>Primary Category</label>
-    <pre class="value">Games</pre>
-  </div>
+<div class="field">
+  <div class="field-label">Review Contact - First Name</div>
+  <div class="field-value" id="contact-first">Evans</div>
+  <button class="copy" onclick="copyToClipboard('contact-first')">Copy</button>
+</div>
 
-  <div class="field">
-    <label>Secondary Category</label>
-    <pre class="value">Simulation</pre>
-  </div>
+<div class="field">
+  <div class="field-label">Phone Number</div>
+  <div class="field-value" id="phone">+1 2096550297</div>
+  <button class="copy" onclick="copyToClipboard('phone')">Copy</button>
+</div>
 
-  <div class="field">
-    <label>Content Rights</label>
-    <pre class="value">This app does not contain third-party content. All artwork, code, and design are original.</pre>
-  </div>
+<div class="field">
+  <div class="field-label">Email</div>
+  <div class="field-value" id="email">croitorzamkov@gmail.com</div>
+  <button class="copy" onclick="copyToClipboard('email')">Copy</button>
+</div>
 
-  <div class="field">
-    <label>Age Rating</label>
-    <pre class="value">4+ (No objectionable content)</pre>
-  </div>
+<div class="field">
+  <div class="field-label">Review Notes</div>
+  <div class="field-value" id="review-notes">1. Launch the app.
+2. The main menu shows "Mill By Moonlight" title with "Play", "Levels", and "Settings" buttons on a moonlit tide mill background.
+3. Tap "Play" to start the current level. The first unstarred unlocked level is auto-selected.
+4. The game scene shows the tide mill with moon phase indicator, water wheel, millstone, wheat and flour storage, and gold balance.
+5. Read the moon phase at the top. When the moon is at least one-third full, tap the millstone to engage grinding. If the moon is too thin, the mill auto-disengages.
+6. Watch the tide cycle: full and new moon bring spring tides (most energy), half moon brings neap tides (less energy).
+7. Manage wheat supply and flour storage. Tap to sell flour when storage is full to free capacity and earn gold.
+8. Spend gold to upgrade the water wheel, millstone, and storage from the upgrade panel.
+9. Reach the flour or gold target before the day limit to complete the contract. A "Level Complete" popup appears with up to three stars based on flour output, gold earned, and upgrade count.
+10. From the popup, tap "Next Level" to proceed.
+11. Return to menu and tap "Levels" to see the level select grid. Verify locked levels show a lock icon and cannot be opened until the previous level is completed.
+12. Tap the Settings button to verify Music and Sound Effects toggles.
+13. Verify the app is fully offline: no network calls, no accounts, no ads, no in-app purchases. All progress is saved locally on device.
+14. The app supports portrait orientation only and iPhone only. ITSAppUsesNonExemptEncryption = false.</div>
+  <button class="copy" onclick="copyToClipboard('review-notes')">Copy</button>
+</div>
 
-  <div class="field">
-    <label>Data Collection Disclosure</label>
-    <pre class="value">Mill By Moonlight does not collect, store, transmit, or share any personal information. The app does not include account registration, social login, advertising SDKs, analytics SDKs, tracking SDKs, or third-party purchase services. All gameplay progress is stored locally on the device.</pre>
-  </div>
+<div class="section-title">Gameplay Fact Card Summary</div>
+<div class="fact-card">
+<strong>Core screen:</strong> Tide mill scene with moon phase indicator, water wheel, millstone, wheat and flour storage, gold balance, and day counter.
+<br><strong>Controls:</strong> Tap millstone to engage grind; tap sell button to sell flour; tap upgrade panel to spend gold on water wheel, millstone, or storage.
+<br><strong>Goal:</strong> Reach the flour or gold target before the day limit to complete the contract and earn up to three stars.
+<br><strong>Fail:</strong> Day limit reached without hitting the flour or gold target.
+<br><strong>Progression:</strong> 50 contracts across four millstone eras (Stone, Porcelain, Steel, Ceramic), sequential unlock, local save.
+</div>
 
-  <div class="field">
-    <label>What's New in Version 1.0</label>
-    <pre class="value">Initial release of Mill By Moonlight. 50 contracts across four millstone eras with realistic lunar tide simulation.</pre>
-  </div>
-
-  <h2>Review Notes for Apple</h2>
-  <div class="field promo">
-    <label>Review Notes for Apple</label>
-    <pre class="value">Mill By Moonlight is a fully offline single-player simulation game. There are no accounts, no network calls, no ads, and no in-app purchases. Gameplay: read the moon phase, wait for at least one-third full moon, tap the millstone to grind flour, sell flour for gold, and upgrade equipment. Reach the flour or gold target before the day limit to complete the contract.
-
-The app uses ITSAppUsesNonExemptEncryption = false because it contains no encryption functionality.
-
-All screenshots are captured from actual gameplay on iPhone. The app supports portrait orientation only and iPhone only.</pre>
-  </div>
+<script>
+function copyToClipboard(elementId) {
+  const text = document.getElementById(elementId).innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    const btn = document.querySelector('button[onclick="copyToClipboard(\'' + elementId + '\')']");
+    const original = btn.innerText;
+    btn.innerText = 'Copied';
+    setTimeout(function() { btn.innerText = original; }, 1200);
+  });
+}
+</script>
 </body>
 </html>
